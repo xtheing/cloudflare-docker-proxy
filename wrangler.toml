@@ -12,23 +12,23 @@ name               = "cloudflare-docker-proxy"
 
 [env.production]
     name = "cloudflare-docker-proxy"
-    routes = [
-        { pattern = "docker.theing.cc", custom_domain = true },
-        { pattern = "quay.theing.cc", custom_domain = true },
-        { pattern = "gcr.theing.cc", custom_domain = true },
-        { pattern = "k8s-gcr.theing.cc", custom_domain = true },
-        { pattern = "k8s.theing.cc", custom_domain = true },
-        { pattern = "ghcr.theing.cc", custom_domain = true },
-        { pattern = "cloudsmith.theing.cc", custom_domain = true },
-    ]
+    # routes = [
+    #     { pattern = "docker.theing.cc", custom_domain = true },
+    #     { pattern = "quay.theing.cc", custom_domain = true },
+    #     { pattern = "gcr.theing.cc", custom_domain = true },
+    #     { pattern = "k8s-gcr.theing.cc", custom_domain = true },
+    #     { pattern = "k8s.theing.cc", custom_domain = true },
+    #     { pattern = "ghcr.theing.cc", custom_domain = true },
+    #     { pattern = "cloudsmith.theing.cc", custom_domain = true },
+    # ]
 
     [env.production.vars]
         MODE            = "production"
         TARGET_UPSTREAM = ""
 
 [env.staging]
-    name  = "cloudflare-docker-proxy-staging"
-    route = { pattern = "docker-staging.theing.cc", custom_domain = true }
+    name = "cloudflare-docker-proxy-staging"
+    # route = { pattern = "docker-staging.theing.cc", custom_domain = true }
 
     [env.staging.vars]
         MODE            = "staging"
